@@ -61,7 +61,7 @@ const YourComponent = () => {
             cuisine="Huntsville AL"
             link="https://www.canadianbakinbread.com/"
           />
-          
+               
           <Card
             imageUrl="https://lh3.googleusercontent.com/p/AF1QipORmUMPLCSGS_meiZHYT_rDq3-CvzhGSbHGrxrZ=s680-w680-h510"
             name="Great Harvest Bread Co"
