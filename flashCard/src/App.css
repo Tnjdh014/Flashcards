@@ -16,12 +16,16 @@ body {
   max-width: 300px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+  transition: all 1000ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
 }
 
 .card:hover {
   box-shadow: 0 0 5px 2px #0000004d;
   transform: perspective(1000px) rotateX(10deg);
 }
+
 
 h2 {
   color: #333;
@@ -41,3 +45,4 @@ button {
   color: green;
   margin-top: 10px;
 }
+
