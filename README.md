@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/jkXdleh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[https://i.imgur.com/jkXdleh.gif](https://i.imgur.com/jkXdleh.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreentoGif
