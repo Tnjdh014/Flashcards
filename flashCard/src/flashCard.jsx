@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
 
-const flashCard = ({ card }) => {
-  const [showAnswer, setShowAnswer] = useState(false);
+const Flashcard = ({ card, onPrevCard, onNextCard }) => {
+  const [userGuess, setUserGuess] = useState('');
+  const [isCorrect, setIsCorrect] = useState(null);
+  const [showFront, setShowFront] = useState(true);
 
-  const handleShowAnswer = () => {
-    setShowAnswer(!showAnswer);
+  const handleGuessChange = (event) => {
+    setUserGuess(event.target.value);
+  };
+
+  const handleSubmitGuess = () => {
+    if (userGuess.toLowerCase() === card.answer.toLowerCase()) {
+      setIsCorrect(true);
+    } else {
+      setIsCorrect(false);
+    }
+  };
+
+  const handleToggleCard = () => {
+    setShowFront(!showFront);
   };
 
   return (
-    <div>
-      <h2>{card.question}</h2>
-      {showAnswer && <p>{card.answer}</p>}
-      <button onClick={handleShowAnswer}>Show Answer</button>
+    <div className="card" onClick={handleToggleCard}>
+      <div className={showFront ? 'front' : 'back'}>
+        <h2>{showFront ? card.question : card.answer}</h2>
+      </div>
     </div>
   );
 };
 
-export default flashCard;
+export default Flashcard;
